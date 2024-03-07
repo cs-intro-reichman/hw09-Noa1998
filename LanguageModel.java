@@ -93,9 +93,9 @@ public class LanguageModel {
         double random_number = randomGenerator.nextDouble();
         int list_size = probs.getSize();
         for (int i = 0; i < list_size; i++) {
-            CharData rel_CD = probs.get(i);
-            if (rel_CD.cp > random_number) {
-                return rel_CD.chr;
+            CharData rel = probs.get(i);
+            if (rel.cp > random_number) {
+                return rel.chr;
             }
         }
         char chr = 'c';

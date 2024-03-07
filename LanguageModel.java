@@ -72,12 +72,12 @@ public class LanguageModel {
         for (int i = 0; i < size; i++) {
             total_chars += probs.get(i).count;
         }
-        double cumulativeProb = 0;
+        double cProb = 0;
         Node pointer = probs.listIterator(0).current;
         while (pointer.next != null) {
             pointer.cp.p = (double) pointer.cp.count / total_chars;
-            cumulativeProb += pointer.cp.p;
-            pointer.cp.cp = cumulativeProb;
+            cProb += pointer.cp.p;
+            pointer.cp.cp = cProb;
             pointer = pointer.next;
         }
         if (pointer.next == null) {

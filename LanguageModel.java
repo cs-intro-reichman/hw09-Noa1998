@@ -1,7 +1,6 @@
 import java.util.HashMap;
 import java.util.Random;
 
-import javax.naming.ldap.LdapName;
 
 public class LanguageModel {
 

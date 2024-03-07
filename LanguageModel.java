@@ -39,11 +39,11 @@ public class LanguageModel {
     /** Builds a language model from the text in the given file (the corpus). */
     public void train(String fileName) {
         // Your code goes here
-        In txtFile = new In(fileName);
+        In file = new In(fileName);
         char c;
         String window = "";
-        while (!txtFile.isEmpty()) {
-            c = txtFile.readChar();
+        while (!file.isEmpty()) {
+            c = file.readChar();
             if (window.length() < windowLength) {
                 window += c;
             } else {
